@@ -1,9 +1,10 @@
-{% from 'form_helper.html' import displayField %}
+{% from 'field-macro.html' import displayField %}
 {% extends "prelogin-layout.html" %}
 
 {% block title %}Login {% endblock %}
 
 {% block content %}
+
     <h2>Login now!</h2>
     <p>Enter you username/password to start RChat</p>
 
@@ -16,7 +17,4 @@
         {{ form.csrf_token }}
     </form>
 
-    <hr>
-
-    <p>Have not registered? <a href={{url_for('index')}}>Register here</a>.</p>
 {% endblock %}
